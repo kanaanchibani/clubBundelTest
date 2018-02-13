@@ -1,0 +1,25 @@
+<h1>Recherche club par nom</h1>
+{{ form (form) }}
+<h1>Liste des Club</h1>
+
+<table border="1">
+    <tr>
+        <th>nom club</th>
+        <th>mail club</th>
+        <th>date creation</th>
+        <th>description club</th>
+    </tr>
+
+    {% for c in club %}
+        <tr>
+            <td>{{ c.nomC}}</td>
+            <td>{{ c.mailC}}</td>
+            <td>{{ c.dateCreation |date}}</td>
+            <td>{{ c.descC}}</td>
+            <td><a href="{{ path('club_supprime',{'id':c.id}) }}">Supprimer</a></td>
+            <td><a href="{{ path('club_modifier',{'id':c.id}) }}">Modifier</a></td>
+
+        </tr>
+    {% endfor %}
+</table>
+

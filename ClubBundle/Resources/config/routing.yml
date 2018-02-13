@@ -1,0 +1,23 @@
+club_homepage:
+    path:     /
+    defaults: { _controller: ClubBundle:Default:index }
+
+club_ajout:
+    path:     /ajout
+    defaults: { _controller: ClubBundle:gererclub:Ajout }
+
+club_affiche:
+    path:     /affiche
+    defaults: { _controller: ClubBundle:gererclub:Affiche }
+
+club_recherche:
+    path:     /recherche
+    defaults: { _controller: ClubBundle:gererclub:Recherche }
+
+club_supprime:
+    path:     /Delete/{id}
+    defaults: { _controller: ClubBundle:gererclub:Delete }
+
+club_modifier:
+    path:     /modifier{id}
+    defaults: { _controller: ClubBundle:gererclub:Modifier }

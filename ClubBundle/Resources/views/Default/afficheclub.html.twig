@@ -1,0 +1,27 @@
+<h1>Liste des Club</h1>
+
+<table>
+    <tr>
+        <th>nom</th>
+        <th>mail</th>
+        <th>date creation</th>
+        <th>Description</th>
+
+
+
+
+
+
+    </tr>
+    {% for c in club %}
+        <tr>
+            <td>{{ c.nomC}}</td>
+            <td>{{ c.mailC}}</td>
+            <td>{{ c.dateCreation |date}}</td>
+            <td>{{ c.descC}}</td>
+
+
+
+        </tr>
+    {% endfor %}
+</table>
